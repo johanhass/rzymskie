@@ -19,7 +19,10 @@ public class Main {
         //printparzystaornot();
         //printujemna();
         //printnajmniejsza();
-        printrok();
+        //printrok();
+        //printmiesiace();
+        printarabskienarzymskie();
+        //printrojakt();
 
     }
 
@@ -219,8 +222,131 @@ public class Main {
         {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Wpisz rok: ");
-            Integer liczba1 = scanner.nextInt();
+            int rok = scanner.nextInt();
+
+
+            if (((rok % 4 == 0) && (rok % 100 != 0)) || (rok % 400 == 0)) {
+                System.out.println("ROk jest przestepny:" + rok);
+            }
+            else
+            {
+                System.out.println("ROk NIEprzestepny:" + rok);
+            }
         }
 
+        public static void printmiesiace()
+        {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Wpisz numer miesiaca: ");
+            int rok = scanner.nextInt();
+
+            switch(rok)
+            {
+                case 1: System.out.println("Styczen");
+                break;
+
+                case 2: System.out.println("Luty");
+                break;
+
+                case 3: System.out.println("Marzec");
+                    break;
+
+                case 4: System.out.println("kwiecien");
+                    break;
+
+                case 5: System.out.println("Maj");
+                    break;
+
+                case 6: System.out.println("Czerwiec");
+                    break;
+
+                case 7: System.out.println("Lipiec");
+                    break;
+
+                case 8: System.out.println("Sierpien");
+                    break;
+
+                case 9: System.out.println("Wrzesien");
+                    break;
+
+                case 10: System.out.println("Pazdiernik");
+                    break;
+
+                case 11: System.out.println("Listoapd");
+                    break;
+
+                case 12: System.out.println("Grudzien");
+                    break;
+
+
+            }
+        }
+        public static void printarabskienarzymskie()
+        {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Wpisz liczbe arabska od 1 do 3999: ");
+            int rok = scanner.nextInt();
+
+            switch(rok) {
+                case 1:
+                    System.out.println("I");
+                    break;
+
+                case 5:
+                    System.out.println("V");
+                    break;
+
+                case 10:
+                    System.out.println("X");
+                    break;
+
+                case 50:
+                    System.out.println("L");
+                    break;
+
+                case 100:
+                    System.out.println("C");
+                    break;
+
+                case 500:
+                    System.out.println("D");
+                    break;
+
+                case 1000:
+                    System.out.println("M");
+                    break;
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+        public static void printrojakt()
+        {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Wpisz bok1: ");
+            int bok1 = scanner.nextInt();
+            System.out.println("Wpisz bok2: ");
+            int bok2 = scanner.nextInt();
+            System.out.println("Wpisz bok3: ");
+            int bok3 = scanner.nextInt();
+
+            if(((bok1+bok2)>bok3) && ((bok2+bok3)>bok1) && ((bok3+bok1)>bok2))
+            {
+                System.out.println("Taki trojkat jest mozliwy.");
+            }
+            else if(((bok1+bok2)<=bok3) || ((bok2+bok3)<=bok1) || ((bok3+bok1)<=bok2) )
+            {
+                System.out.println("Taki trojkat jest niemozliwy.");
+            }
+
+        }
     }
 
